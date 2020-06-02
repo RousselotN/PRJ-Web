@@ -1,0 +1,31 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #1c0808;
+}
+
+.splash {
+	background-image: url("../../Data/logo_sponsor.png");
+	height: 100%;
+	margin: 0px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	animation:signup-response 0.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+	animation-delay:2s;
+    -webkit-animation-delay:2s;
+    -webkit-animation-fill-mode: forwards;
+	
+}
+
+@keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes signup-response{
+    from {opacity :1;}
+    to {opacity :0;}
+}
