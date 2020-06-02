@@ -9,13 +9,17 @@
     <body>
 		<div class="splash" id="splashscreen">
 		</div>
-		
+		<div id="livescore" class="delay_appear">
+			<h4>Ongoing Match</h4>
+			<table id="livematch">
+			</table>
+		</div>
     </body>
 	<script>
 	getScore();
 	
 	function getScore(){
-			fetch('https://api.jsonbin.io/b/5ed65fd27741ef56a5669a45', {
+			fetch('https://api.jsonbin.io/b/5ed65fd27741ef56a5669a45/1', {
 				method: "GET",
 				headers: {
 					"secret-key": "$2b$10$kUJqasOR4psv3APGolCdruTaMIL/cchpozXsBzpGQA2LGuzqVnjmq"
@@ -24,7 +28,30 @@
 				.then(response => response.json())                                         
 				.then(function (data) {
    					 console.log('data', data)
+					 data.forEach((key) => { createScore(key.team1, key.score1, key.score2, key.team2) })
 				})
 		}
+	
+	function createScore(team1, score1, team2, score2){
+		var table = document.querySelector("#livematch");
+		var newtr = document.createElement("tr");
+		var newteam1 = document.createElement("td");
+		var newteam2 = document.createElement("td");
+		var newscore1 = document.createElement("td");
+		var newscore2 = document.createElement("td");
+		var textteam1 = document.createTextNode(team1);
+		var textteam2 = document.createTextNode(team2);
+		var textscore1 = document.createTextNode(score1);
+		var textscore2 = document.createTextNode(score2);
+		newteam1.appendChild(textteam1);
+		newteam2.appendChild(textteam2);
+		newscore1.appendChild(textscore1);
+		newscore2.appendChild(textscore2);
+		newtr.appendChild(newteam1);
+		newtr.appendChild(newscore1);
+		newtr.appendChild(newteam2);
+		newtr.appendChild(newscore2);
+		table.appendChild(newtr);
+	}
 	</script>
 </html>
