@@ -27,7 +27,6 @@ header::after {
 
 .logo {
 	float: left;
-	margin-top: 10px
 }
 
 img {
@@ -45,12 +44,18 @@ nav ul {
   list-style: none;
 }
 
-nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
+.slogo {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 23px;
+	position: relative;
+}
 
-  position: relative;
+nav li:not(.slogo) {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 10px;
+	position: relative;
 }
 
 nav a {
@@ -64,21 +69,19 @@ nav a:hover {
   color: #e33e44;
 }
 
-nav a::before {
-  content: '';
-  display: block;
-  height: 5px;
-  background-color: #e33e44;
-
-  position: absolute;
-  top: 0;
-  width: 0%;
-
-  transition: all ease-in-out 250ms;
+nav a:not(.dp)::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #e33e44;
+	position: absolute;
+	top: 0;
+	width: 0%;
+	transition: all ease-in-out 250ms;
 }
 
 nav a:not(.dp):hover::before {
-  width: 100%;
+	width: 100%;
 }
 
 li.dropdown {
@@ -142,12 +145,23 @@ li.dropdown {
 
 #livescore {
 	position: absolute;
-	top: 0;
-	left: 0;
-	margin-top: 3%;
 	color: #FFFFFF;
 	font-weight: bold;
-	font-family: roboto;	
+	font-family: sans-serif;
+	text-transform: uppercase;	
+}
+
+.matchscore  {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 0.3%;
+	margin-left: 1%;
+}
+
+.matchscore h4 {
+	background-color: #e33e44;
+	text-align: center;	
 }
 
 @keyframes appear {
