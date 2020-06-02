@@ -12,6 +12,19 @@
 		
     </body>
 	<script>
-	$('#splashscreen').hide().delay(5000).fadeIn(400);
+	getScore();
+	
+	function getScore(){
+			fetch('https://api.jsonbin.io/b/5ed65fd27741ef56a5669a45', {
+				method: "GET",
+				headers: {
+					"secret-key": "$2b$10$kUJqasOR4psv3APGolCdruTaMIL/cchpozXsBzpGQA2LGuzqVnjmq"
+				}
+			})
+				.then(response => response.json())                                         
+				.then(function (data) {
+   					 console.log('data', data)
+				})
+		}
 	</script>
 </html>
