@@ -13,7 +13,7 @@
 			<nav>
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
-					<li><a class="active" href="#">Home</a></li>
+					<li><a href="#">Home</a></li>
 					<li class="dropdown">
 						<a href="#">Season 2</a>
 						<div class="dropdown-content">
@@ -31,7 +31,7 @@
 						</div>
 					</li>
 					<li><a href="#">Power Ranking</a></li>
-					<li><a href="#">About-Us</a></li>
+					<li><a href="../Pages/AboutUs.html">About-Us</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
@@ -57,7 +57,7 @@
    					 console.log('data', data)
 					 data.forEach((key) => { createScore(key.team1, key.score1, key.score2, key.team2) })
 				})
-		}
+	}
 	
 	function createScore(team1, score1, team2, score2){
 		var table = document.querySelector("#livematch");
