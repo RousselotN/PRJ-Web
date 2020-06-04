@@ -205,3 +205,54 @@ input:not(:valid) {
     margin-left: 50px;
     padding: 5px;
 }
+
+footer {
+	margin-top: 25px;
+	border-top: 1px solid #e33e44;	
+	background-color: #1c0808;
+}
+
+.reseaux
+{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+}
+
+#BasDePage
+{
+    margin-left: 350px;
+    margin-right: 350px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+	font-family: sans-serif;
+}
+
+.apropos
+{
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+	font-family: sans-serif;
+}
+
+.BasTitre
+{
+    font-size: 23px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+	font-family: sans-serif;
+    border-bottom: 2px solid white;
+}
+
+.Marque
+{
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+}
