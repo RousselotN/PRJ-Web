@@ -149,11 +149,11 @@ td {
 }
 
 tr {
-	
+	transition: background-color 0.2s ease-in-out;
 }
 
 tr:not(.head):hover {
-	background-color: #;
+	background-color: #582630;
 }
 
 #title {
