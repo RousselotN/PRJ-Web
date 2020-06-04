@@ -69,7 +69,7 @@ nav a:hover {
   color: #e33e44;
 }
 
-nav a:not(.dp)::before {
+nav a:not(.dp):not(.active)::before {
 	content: '';
 	display: block;
 	height: 5px;
@@ -79,6 +79,18 @@ nav a:not(.dp)::before {
 	width: 0%;
 	transition: all ease-in-out 250ms;
 }
+
+.active::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #e33e44;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: all ease-in-out 250ms;
+}
+
 
 nav a:not(.dp):hover::before {
 	width: 100%;
