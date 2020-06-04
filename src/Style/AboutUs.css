@@ -135,12 +135,71 @@ li.dropdown {
     color: #FFFFFF;
     overflow-x:auto;
     margin-top: 1%;
-    margin-left: auto;
-    margin-right:auto;
+    margin-left: 50px;
 }
 
 h2 {
     color:#e33e44;
+}
+
+footer
+{
+    position: absolute;
+    bottom: none;
+    left: none;
+    right: none;
+    width: 100%;
+    margin: 0;
+
+    background: black;
+
+
+}
+
+.reseaux
+{
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+#BasDePage
+{
+    margin-left: 350px;
+    margin-right: 350px;
+
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.apropos
+{
+    font-family: 'Lobster-corps';
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+}
+
+.BasTitre
+{
+    font-family: 'Lobster-corps';
+    font-size: 23px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+
+    border-bottom: 2px solid white;
+}
+
+.Marque
+{
+    font-family: 'Lobster-corps';
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
 }
 
 @keyframes appear {
