@@ -13,25 +13,20 @@
 			<nav>
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
-					<li><a href="#">Home</a></li>
+					<li><a class="active" href="index.html">Home</a></li>
 					<li class="dropdown">
 						<a href="#">Season 2</a>
 						<div class="dropdown-content">
-							<a class="dp" href="#">Leaderboard</a>
-							<a class="dp" href="#">Matches</a>
 							<a class="dp" href="#">Rules</a>
 							<a class="dp" href="#">Maps</a>
 						</div>
 					</li>
 					<li class="dropdown">
-						<a href="#">Hall Of Fame</a>
-						<div class="dropdown-content">
-							<a class="dp" href="#">Season 1</a>
-							<a class="dp" href="#">Glitch Edition</a>
-						</div>
+						<a href="#">Registrations</a>
 					</li>
-					<li><a href="#">Power Ranking</a></li>
-					<li><a href="../Pages/AboutUs.html">About-Us</a></li>
+					<li><a href="powerranking.html">Power Ranking</a></li>
+					<li><a href="#">Sponsors</a></li>
+					<li><a href="#">About-Us</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
@@ -57,7 +52,7 @@
    					 console.log('data', data)
 					 data.forEach((key) => { createScore(key.team1, key.score1, key.score2, key.team2) })
 				})
-	}
+		}
 	
 	function createScore(team1, score1, team2, score2){
 		var table = document.querySelector("#livematch");
