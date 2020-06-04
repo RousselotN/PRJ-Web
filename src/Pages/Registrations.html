@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FSL Season 2</title>
+		<link rel="icon" href="../../Data/favicon.png">
+		<link rel="stylesheet" href="../Style/Registrations.css">
+    </head>
+    <body>
+		<div class="container">
+			<nav>
+				<ul>
+					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#">Season 2</a>
+						<div class="dropdown-content">
+							<a class="dp" href="#">Rules</a>
+							<a class="dp" href="#">Maps</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a  class="active" href="#">Registrations</a>
+					</li>
+					<li><a href="powerranking.html">Power Ranking</a></li>
+					<li><a href="#">Sponsors</a></li>
+					<li><a href="AboutUs.html">About Us</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			
+			<div id="title">
+				<h1>Registrations</h1>
+				<p>This page shows all the different teams registered and their captain. </br>You will find above the table a form to add your own team in it.</p>
+			</div>
+
+			<form id="form" class="top-margin">
+				<div class="flexbox">
+					<input type="text" id="team" placeholder="Enter your team name">
+					<input type="text" id="captain" placeholder="Enter your captain name">
+				</div>
+				<div class="top-margin">
+					<button class = "formbutton" id="add" onclick="ajouter();">Add team</button>
+					<button class = "formbutton" onclick="supprimer()">Delete team</button>
+				</div>
+			</form>
+
+			<div>
+				<table id="registered">
+					<tr class="head">
+						<td>Number</td>
+						<td></td>
+						<td>Team</td>
+						<td>Captain</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td></td>
+						<td>Aurora Racing</td>
+						<td>tk</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td></td>
+						<td>Numelops</td>
+						<td>SinasAppel</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td></td>
+						<td>aAa</td>
+						<td>Cyril</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td></td>
+						<td>Metaleak</td>
+						<td>Navi</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td></td>
+						<td>Evo</td>
+						<td>Chroma</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td></td>
+						<td>Numelops Academy</td>
+						<td>Aethal</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>High Physix</td>
+						<td>uFmao</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td></td>
+						<td>SpeedMania</td>
+						<td>Fushion</td>
+					</tr>
+				</table>
+			</div>
+	</body>
+	<script>
+		console.log(document.body)
+		var compteur = 9;
+
+		function ajouter(){
+			event.preventDefault();
+			var table = document.getElementById("registered");
+			var newtr = document.createElement("tr");
+			var newnumber = document.createElement("td");
+			var newempty = document.createElement("td");
+			var newteam = document.createElement("td");
+			var newcaptain = document.createElement("td");
+			var textnumber = document.createTextNode(compteur);
+			var textempty = document.createTextNode('');
+			var textteam = document.createTextNode(document.getElementById('team').value);
+			var textcaptain = document.createTextNode(document.getElementById('captain').value);
+			if (textteam.length != 0 && textcaptain.length != 0) {
+				newnumber.appendChild(textnumber);
+				newempty.appendChild(textempty);
+				newteam.appendChild(textteam);
+				newcaptain.appendChild(textcaptain);
+				newtr.appendChild(newnumber);
+				newtr.appendChild(newempty);
+				newtr.appendChild(newteam);
+				newtr.appendChild(newcaptain);
+				table.appendChild(newtr);
+				compteur++;
+			}
+			else {
+				alert("Please fill the form")
+			}
+		}
+
+		function supprimer(){
+			var rows = document.getElementsByTagName('tr');
+			if (rows.length <= 1){
+				alert("Nothing to delete");
+			}
+			else {
+			var lastrow = rows[rows.length - 1];
+			document.getElementById('registered').removeChild(lastrow);
+			compteur--;
+			}		
+		}
+	</script>
+</html>
