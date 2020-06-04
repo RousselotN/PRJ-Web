@@ -91,5 +91,45 @@
 					</tr>
 				</table>
 			</div>
+			<div id="simulator">
+				<form>
+					<select id="team1">
+						<option value="1751">Aurora Racing</option>
+						<option value="1730">Numelops</option>
+						<option value="1583">aAa</option>
+						<option value="1424">Metaleak</option>
+						<option value="1221">Evo</option>
+						<option value="1157">Numelops Academy</option>
+						<option value="1139">High Physix</option>
+						<option value="830">SpeedMania</option>
+					</select>
+					<select id="team2">
+						<option value="1751">Aurora Racing</option>
+						<option value="1730">Numelops</option>
+						<option value="1583">aAa</option>
+						<option value="1424">Metaleak</option>
+						<option value="1221">Evo</option>
+						<option value="1157">Numelops Academy</option>
+						<option value="1139">High Physix</option>
+						<option value="830">SpeedMania</option>
+					</select>
+				</form>
+				<button class = "formbutton" id="simulate" onclick="prediction();">Simuler</button>
+				<p id="textsimu"></p>
+			</div>
     </body>
+	<script>
+	
+	function prediction(){
+		var team1 = document.getElementById("team1").value;
+		var team2 = document.getElementById("team2").value;
+		var t1 = document.getElementById("team1");
+		var t2 = document.getElementById("team2");
+		var textteam1 = t1.options[t1.selectedIndex].text;
+		var textteam2 = t2.options[t2.selectedIndex].text;
+		var team1chance = 1 / (1 + Math.pow(10, (team2 - team1)/400));
+		var chance = (team1chance*100).toFixed(2);
+		document.getElementById("textsimu").innerHTML = textteam1 + ' has ' + chance +'% chance of winning against ' + textteam2;
+	}
+	</script>
 </html>

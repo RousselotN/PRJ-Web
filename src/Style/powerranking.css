@@ -148,12 +148,52 @@ td {
 	background-color: #e33e44;
 }
 
-tr.not(.head):hover {
-	background-color: #e4e4e4;
+tr {
+	
+}
+
+tr:not(.head):hover {
+	background-color: #;
 }
 
 #title {
 	text-align:center;
 	margin-top:7%;
 	color: #ffffff;
+}
+
+.formbutton {
+	border: none;
+	background-color: #582630;
+	text-transform: uppercase;
+	margin-left: 5px;
+	padding: 5px;
+	font-family: sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	transition: background-color 0.2s ease-in-out;
+	margin-top: 6px;
+}
+
+.formbutton:hover {
+	background-color: #e33e44;
+}
+
+#simulator {
+	margin-top: 1%;
+	text-align:center;
+}
+
+select {
+	text-align:center;
+	font-weight: bold;
+	flex: 1;
+	padding: 0 .5em;
+	color: #000;
+	cursor: pointer;
+}
+
+#simulator p{
+	color: #FFFFFF
 }
