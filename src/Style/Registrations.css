@@ -126,7 +126,7 @@ li.dropdown {
   opacity: 1;	
 }
 
-#registered {
+table {
 	display: box;
 	color: #FFFFFF;
 	font-family: sans-serif;
@@ -156,7 +156,7 @@ tr:not(.head):hover {
 	background-color: #582630;
 }
 
-#title {
+.title {
 	text-align:center;
 	margin-top:7%;
 	color: #ffffff;
@@ -202,7 +202,7 @@ input:not(:valid) {
     border: none;
     background-color: #EEEEEE;
     text-transform: uppercase;
-    margin-left: 50px;
+    margin-left: 150px;
     padding: 5px;
 }
 
