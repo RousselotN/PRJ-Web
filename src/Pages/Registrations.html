@@ -29,9 +29,12 @@
 				</ul>
 			</nav>
 			</div>
-			<div id="title">
+			<div class="title">
 				<h1>Registrations</h1>
-				<p>This page shows all the different teams registered and their captain. </br>You will find above the table a form to add your own team in it.</p>
+				<p>This page shows all the different teams registered and their captain. 
+					</br>You will find above the table a form to add your own team in it.
+					</br> Once you add a team, you can add players and specify their roles.
+				</p>
 			</div>
 
 			<form id="form" class="top-margin">
@@ -41,7 +44,7 @@
 				</div>
 				<div class="top-margin">
 					<button class = "formbutton" id="add" onclick="ajouter();">Add team</button>
-					<button class = "formbutton" onclick="supprimer()">Delete team</button>
+					<button class = "formbutton" id="suppr" onclick="supprimer()">Delete team</button>
 				</div>
 			</form>
 
@@ -103,14 +106,38 @@
 					</tr>
 				</table>
 			</div>
+			<div id="MemberSection">
+				<p class="title">Here you can enter your new team's members!</p>
+				<form>
+					<div class="flexbox">
+						<input type="text" id="member" placeholder="Enter a team member name">
+						<select id="role">
+							<option value="Player">Player</option>
+							<option value="Sub">Sub</option>
+						</select>
+					</div>
+					<div class="top-margin">
+						<button class = "formbutton" id="addmember" onclick="ajoutermembre();">Add member</button>
+					</div>
+				</form>
+				<table id="members">
+					<tr class="head">
+						<td>Member</td>
+						<td></td>
+						<td>Role</td>
+					</tr>
+				</table>
+			</div>
 	</body>
 	<script>
 		console.log(document.body)
+		document.querySelector("#MemberSection").style.display ="none";
+		document.querySelector("#suppr").disabled = true;
 		var compteur = 9;
 
 		function ajouter(){
 			event.preventDefault();
-			var table = document.getElementById("registered");
+			var table = document.querySelector("#registered");
 			var newtr = document.createElement("tr");
 			var newnumber = document.createElement("td");
 			var newempty = document.createElement("td");
@@ -118,8 +145,8 @@
 			var newcaptain = document.createElement("td");
 			var textnumber = document.createTextNode(compteur);
 			var textempty = document.createTextNode('');
-			var textteam = document.createTextNode(document.getElementById('team').value);
-			var textcaptain = document.createTextNode(document.getElementById('captain').value);
+			var textteam = document.createTextNode(document.querySelector('#team').value);
+			var textcaptain = document.createTextNode(document.querySelector('#captain').value);
 			if (textteam.length != 0 && textcaptain.length != 0) {
 				newnumber.appendChild(textnumber);
 				newempty.appendChild(textempty);
@@ -131,24 +158,53 @@
 				newtr.appendChild(newcaptain);
 				table.appendChild(newtr);
 				compteur++;
+				showMembers();
+				document.querySelector("#add").disabled = true;
+				document.querySelector("#suppr").disabled = false;
 			}
 			else {
-				alert("Please fill the form")
+				alert("Please fill in the form")
+			}
+		}
+		
+		function ajoutermembre(){
+			event.preventDefault();
+			var table = document.querySelector("#members");
+			var newtr = document.createElement("tr");
+			var newmember = document.createElement("td");
+			var newempty = document.createElement("td");
+			var newrole = document.createElement("td");
+			var textmember = document.createTextNode(document.querySelector("#member").value);
+			var textempty = document.createTextNode('');
+			var textrole = document.createTextNode(document.querySelector('#role').value);
+			if (textmember.length != 0 && textrole.length != 0) {
+				newmember.appendChild(textmember);
+				newempty.appendChild(textempty);
+				newrole.appendChild(textrole);
+				newtr.appendChild(newmember);
+				newtr.appendChild(newempty);
+				newtr.appendChild(newrole);
+				table.appendChild(newtr);
+				
+			}
+			else {
+				alert("Please fill in the form")
 			}
 		}
 
 		function supprimer(){
 			var rows = document.getElementsByTagName('tr');
-			if (rows.length <= 1){
-				alert("Nothing to delete");
-			}
-			else {
 			var lastrow = rows[rows.length - 1];
-			document.getElementById('registered').removeChild(lastrow);
-			compteur--;
-			}		
+			document.querySelector('#registered').removeChild(lastrow);
+			compteur--;	
+		}
+
+		function showMembers(){
+			document.querySelector("#MemberSection").style.display = "block";
 		}
 	</script>
+
+
 	<footer>
     <br />
     <div id="BasDePage">
