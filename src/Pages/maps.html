@@ -4,19 +4,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>FSL Season 2</title>
 		<link rel="icon" href="../../Data/favicon.png">
-		<link rel="stylesheet" href="../Style/index.css">
+		<link rel="stylesheet" href="../Style/maps.css">
     </head>
     <body>
-		<div class="splash" id="splashscreen">
-		</div>
-		<div class="container delay_appear">
+		<div class="container">
 			<nav>
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
-					<li><a class="active" href="index.html">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li class="dropdown">
 						<a href="#">Season 2</a>
-						<div class="dropdown-content">
+						<div class="active dropdown-content">
 							<a class="dp" href="rules.html">Rules</a>
 							<a class="dp" href="maps.html">Maps</a>
 						</div>
@@ -31,11 +29,15 @@
 				</ul>
 			</nav>
 		</div>
-		<div id="livescore" class="matchscore delay_appear">
-			<h4>LIVE</h4>
-			<table id="livematch">
-			</table>
-		</div>
+		<div class="title">
+				<h1>Download the maps</h1>
+				<p>Here you can download all the maps for the FullSpeed League. 
+					</br>Also you can check them on ManiaExchange.
+				</p>
+				<form action="https://tm.mania-exchange.com/mappack/download/319">
+					<input type="submit" value="Download maps" class="btn"/>
+				</form>
+			</div>
     </body>
 	<script>
 	getScore();
@@ -76,7 +78,7 @@
 		table.appendChild(newtr);
 	}
 	</script>
-	<footer class="delay_appear">
+	<footer>
     <br />
     <div id="BasDePage">
         <a href="https://discord.gg/baK7by" target="_blank">
