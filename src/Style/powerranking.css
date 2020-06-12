@@ -194,7 +194,7 @@ select {
 	cursor: pointer;
 }
 
-.icon {
+.nav .icon {
   display: none;
 }
 

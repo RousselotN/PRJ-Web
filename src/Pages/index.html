@@ -5,12 +5,13 @@
         <title>FSL Season 2</title>
 		<link rel="icon" href="../../Data/favicon.png">
 		<link rel="stylesheet" href="../Style/index.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+<body>
 
-		</div>
+	
 		<div class="container">
-			<nav>
+			<nav class="nav" id="nav">
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
 					<li><a class="active" href="index.html">Home</a></li>
@@ -26,17 +27,56 @@
 					</li>
 					<li><a href="powerranking.html">Power Ranking</a></li>
 					<li><a href="sponsors.html">Sponsors</a></li>
+					<li href="javascript:void(0);" class="icon" onclick="responsive()">
+						<i class="fa fa-bars"></i>
+					</li>
 				</ul>
 			</nav>
 		</div>
+
+
+
+
+		<div class="textHome">
 		<div id="livescore" class="matchscore">
 			<h4>LIVE</h4>
 			<table id="livematch">
 			</table>
 		</div>
-    </body>
+		<h1 class="tt">FullSpeed League Season 2</h1>
+			<p>
+				Bienvenue sur le site officiel FSL2. Ici, vous pourrez vivre la compétition en tant qu'insider. 
+				Vous pourrez télécharger les <a href="maps.html">cartes</a> et les <a href="maps.html">règles</a> du tournois.
+				Vous pouvez <a href="Registrations.html">enregistrer</a> votre équipe en indiquant son capitaine.
+				Vous avez à dispistion un <a heref="powerranking.html">simulateur</a> de confrontation, qui vous donnera les probabilités de victoire de chaque équipe en match.
+				Vous pourrez ensuite vous rendre sur la page de nos chers <a href="sponsors.html">sponsors</a> qui nous soutiennent durant cette compétition et qui s'en eux, rien ne serait possible.
+			</p>
+		</div>
+
+		
+		<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/Fv4X3IwqxvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<div class="textHome">
+		<h1 class="tt">Regardez la finale de la Saison 1 !</h1>
+		</div>
+		
+		<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/o2BOdc9dwUs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+	
+
+
+
 	<script>
 	getScore();
+	
+	function responsive() {
+		var x = document.getElementById("nav");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		} else {
+			x.className = "nav";
+		}
+	}
 	
 	function getScore(){
 			fetch('https://api.jsonbin.io/b/5ed6b7d579382f568bd1e87f', {
