@@ -5,30 +5,34 @@
 	<link rel = "stylesheet" href = "../Style/contact.css">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="../../Data/favicon.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title> FSL Season 2 </title>
 </head>
 
 <body>
 
 	<div class="container">
-		<nav>
-			<ul>
-				<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
-				<li><a href="index.html">Home</a></li>
-				<li class="dropdown">
-					<a href="#">Season 2</a>
-					<div class="dropdown-content">
-						<a class="dp" href="rules.html">Rules</a>
-						<a class="dp" href="maps.html">Maps</a>
-					</div>
-				</li>
-				<li class="dropdown">
-					<a href="Registrations.html">Registrations</a>
-				</li>
-				<li><a href="powerranking.html">Power Ranking</a></li>
-				<li><a href="sponsors.html">Sponsors</a></li>
-			</ul>
-		</nav>
+			<nav class="nav" id="nav">
+				<ul>
+					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
+					<li><a class="active" href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#">Season 2</a>
+						<div class="dropdown-content">
+							<a class="dp" href="rules.html">Rules</a>
+							<a class="dp" href="maps.html">Maps</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="Registrations.html">Registrations</a>
+					</li>
+					<li><a href="powerranking.html">Power Ranking</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li href="javascript:void(0);" class="icon" onclick="responsive()">
+						<i class="fa fa-bars"></i>
+					</li>
+				</ul>
+			</nav>
 		</div>
 
 	<section>
@@ -78,4 +82,14 @@
 		<p class="Marque"> ® FSL Season 2 2020
 	</footer>
 </body>
+<script>
+function responsive() {
+		var x = document.getElementById("nav");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		} else {
+			x.className = "nav";
+		}
+	}
+</script>
 </html>

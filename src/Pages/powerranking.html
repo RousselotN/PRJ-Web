@@ -5,10 +5,11 @@
         <title>FSL Season 2</title>
 		<link rel="icon" href="../../Data/favicon.png">
 		<link rel="stylesheet" href="../Style/powerranking.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 		<div class="container">
-			<nav>
+			<nav class="nav" id="nav">
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
 					<li><a href="index.html">Home</a></li>
@@ -24,9 +25,12 @@
 					</li>
 					<li><a class="active" href="powerranking.html">Power Ranking</a></li>
 					<li><a href="sponsors.html">Sponsors</a></li>
+					<li href="javascript:void(0);" class="icon" onclick="responsive()">
+						<i class="fa fa-bars"></i>
+					</li>
 				</ul>
 			</nav>
-			</div>
+		</div>
 			<div id="title">
 				<h1>Power Ranking</h1>
 				<p>The power Ranking works based on Elo rating system. It rewards the 8 best teams in the world, competing in the FullSpeed League. </br>You will find below the table a simulator to test the chance of win of each team in a match.</p>
@@ -149,6 +153,15 @@
 		<p class="Marque"> ® FSL Season 2 2020
 	</footer>
 	<script>
+	function responsive() {
+		var x = document.getElementById("nav");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		} else {
+			x.className = "nav";
+		}
+	}
+	
 	
 	function prediction(){
 		var team1 = document.getElementById("team1").value;

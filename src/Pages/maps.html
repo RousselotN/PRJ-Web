@@ -5,16 +5,17 @@
         <title>FSL Season 2</title>
 		<link rel="icon" href="../../Data/favicon.png">
 		<link rel="stylesheet" href="../Style/maps.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 		<div class="container">
-			<nav>
+			<nav class="nav" id="nav">
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
 					<li><a href="index.html">Home</a></li>
-					<li class="dropdown">
+					<li class="active dropdown">
 						<a href="#">Season 2</a>
-						<div class="active dropdown-content">
+						<div class="dropdown-content">
 							<a class="dp" href="rules.html">Rules</a>
 							<a class="dp" href="maps.html">Maps</a>
 						</div>
@@ -24,6 +25,9 @@
 					</li>
 					<li><a href="powerranking.html">Power Ranking</a></li>
 					<li><a href="sponsors.html">Sponsors</a></li>
+					<li href="javascript:void(0);" class="icon" onclick="responsive()">
+						<i class="fa fa-bars"></i>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -38,42 +42,13 @@
 			</div>
     </body>
 	<script>
-	getScore();
-	
-	function getScore(){
-			fetch('https://api.jsonbin.io/b/5ed6b7d579382f568bd1e87f', {
-				method: "GET",
-				headers: {
-					"secret-key": "$2b$10$kUJqasOR4psv3APGolCdruTaMIL/cchpozXsBzpGQA2LGuzqVnjmq"
-				}
-			})
-				.then(response => response.json())                                         
-				.then(function (data) {
-   					 console.log('data', data)
-					 data.forEach((key) => { createScore(key.team1, key.score1, key.score2, key.team2) })
-				})
+	function responsive() {
+		var x = document.getElementById("nav");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		} else {
+			x.className = "nav";
 		}
-	
-	function createScore(team1, score1, team2, score2){
-		var table = document.querySelector("#livematch");
-		var newtr = document.createElement("tr");
-		var newteam1 = document.createElement("td");
-		var newteam2 = document.createElement("td");
-		var newscore1 = document.createElement("td");
-		var newscore2 = document.createElement("td");
-		var textteam1 = document.createTextNode(team1);
-		var textteam2 = document.createTextNode(team2);
-		var textscore1 = document.createTextNode(score1);
-		var textscore2 = document.createTextNode(score2);
-		newteam1.appendChild(textteam1);
-		newteam2.appendChild(textteam2);
-		newscore1.appendChild(textscore1);
-		newscore2.appendChild(textscore2);
-		newtr.appendChild(newteam1);
-		newtr.appendChild(newscore1);
-		newtr.appendChild(newteam2);
-		newtr.appendChild(newscore2);
-		table.appendChild(newtr);
 	}
 	</script>
 	<footer>

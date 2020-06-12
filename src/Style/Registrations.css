@@ -152,6 +152,36 @@ tr {
 	transition: background-color 0.2s ease-in-out;
 }
 
+i {
+	  color: #FFFFFF;
+}
+
+.icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .nav li:not(:first-child) {display: none;}
+  .nav li.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav.responsive {position: relative;}
+  .nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+ .nav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
 tr:not(.head):hover {
 	background-color: #582630;
 }

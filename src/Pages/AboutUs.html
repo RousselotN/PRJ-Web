@@ -5,13 +5,14 @@
         <title>FSL Season 2</title>
         <link rel="icon" href="../../Data/favicon.png">
         <link rel="stylesheet" href="../Style/AboutUs.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
 		<div class="container">
-			<nav>
+			<nav class="nav" id="nav">
 				<ul>
 					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
-					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="index.html">Home</a></li>
 					<li class="dropdown">
 						<a href="#">Season 2</a>
 						<div class="dropdown-content">
@@ -20,13 +21,16 @@
 						</div>
 					</li>
 					<li class="dropdown">
-                        <a href="Registrations.html">Registrations</a>
+						<a href="Registrations.html">Registrations</a>
 					</li>
 					<li><a href="powerranking.html">Power Ranking</a></li>
 					<li><a href="sponsors.html">Sponsors</a></li>
+					<li href="javascript:void(0);" class="icon" onclick="responsive()">
+						<i class="fa fa-bars"></i>
+					</li>
 				</ul>
 			</nav>
-        </div>
+		</div>
         <div id="title">
             <h3>Notre équipe :</h3>
         </div>
@@ -76,4 +80,14 @@
 	
 		<p class="Marque"> ® FSL Season 2 2020
 	</footer>
+	<script>
+	function responsive() {
+		var x = document.getElementById("nav");
+		if (x.className === "nav") {
+			x.className += " responsive";
+		} else {
+			x.className = "nav";
+		}
+	}
+	</script>
 </html>
