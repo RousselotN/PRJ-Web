@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>FSL Season 2</title>
+		<link rel="icon" href="../../Data/favicon.png">
+		<link rel="stylesheet" href="../Style/rules.css">
+    </head>
+    <body>
+		<div class="container">
+			<nav>
+				<ul>
+					<li class="slogo"><img class="logo" src="../../Data/logo_with_sponsor.png"></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="dropdown">
+						<a href="#">Season 2</a>
+						<div class="active dropdown-content">
+							<a class="dp" href="rules.html">Rules</a>
+							<a class="dp" href="maps.html">Maps</a>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="Registrations.html">Registrations</a>
+					</li>
+					<li><a href="powerranking.html">Power Ranking</a></li>
+					<li><a href="sponsors.html">Sponsors</a></li>
+					<li><a href="aboutus.html">About-Us</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="title">
+				<h1>Download the rules</h1>
+				<p>Rules are extremely important if you plan on playing the FullSpeed League. Thus, we invite you to read them carefully. </br>Here you can download all the rules for the FullSpeed League. 
+					</br>Also you can check them on our discord.
+				</p>
+				<form action="https://tm.mania-exchange.com/mappack/download/319">
+					<input type="submit" value="Download rules" class="btn"/>
+				</form>
+			</div>
+    </body>
+	<script>
+	getScore();
+	
+	function getScore(){
+			fetch('https://api.jsonbin.io/b/5ed6b7d579382f568bd1e87f', {
+				method: "GET",
+				headers: {
+					"secret-key": "$2b$10$kUJqasOR4psv3APGolCdruTaMIL/cchpozXsBzpGQA2LGuzqVnjmq"
+				}
+			})
+				.then(response => response.json())                                         
+				.then(function (data) {
+   					 console.log('data', data)
+					 data.forEach((key) => { createScore(key.team1, key.score1, key.score2, key.team2) })
+				})
+		}
+	
+	function createScore(team1, score1, team2, score2){
+		var table = document.querySelector("#livematch");
+		var newtr = document.createElement("tr");
+		var newteam1 = document.createElement("td");
+		var newteam2 = document.createElement("td");
+		var newscore1 = document.createElement("td");
+		var newscore2 = document.createElement("td");
+		var textteam1 = document.createTextNode(team1);
+		var textteam2 = document.createTextNode(team2);
+		var textscore1 = document.createTextNode(score1);
+		var textscore2 = document.createTextNode(score2);
+		newteam1.appendChild(textteam1);
+		newteam2.appendChild(textteam2);
+		newscore1.appendChild(textscore1);
+		newscore2.appendChild(textscore2);
+		newtr.appendChild(newteam1);
+		newtr.appendChild(newscore1);
+		newtr.appendChild(newteam2);
+		newtr.appendChild(newscore2);
+		table.appendChild(newtr);
+	}
+	</script>
+	<footer>
+    <br />
+    <div id="BasDePage">
+        <a href="https://discord.gg/baK7by" target="_blank">
+            <div> <img class="foot" src="../../Data/discord.png" class="reseaux"> </div>
+		</a>
+
+		<a href="https://twitter.com/FullSpeedLeague" target="_blank">
+		<div> <img class="foot" src="../../Data/twitter.png" class="reseaux"> </div>
+			</a>
+
+			<a href="https://www.youtube.com/channel/UCMnoHvlZK4XgkuffvbqYc_g" target="_blank">
+				<div> <img class="foot" id="yt" src="../../Data/yt.png" class="reseaux"> </div>
+			</a>
+
+		</div>
+		<br />
+
+		<p class="BasTitre"> A propos de FSL <br /><br /> </p>
+		<br />
+
+		<p class="apropos">
+
+			- Qui sommes-nous ? <br /><br />
+
+			- Nous contacter <br /><br />
+
+	
+		</p>
+	
+		<p class="Marque"> ® FSL Season 2 2020
+	</footer>
+</html>
