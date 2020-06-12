@@ -181,6 +181,15 @@ footer {
 	font-family: sans-serif;
 }
 
+.apropos a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.apropos a:hover {
+	border-bottom: 1px solid #e33e44;	
+}
+
 .BasTitre
 {
     font-size: 23px;
