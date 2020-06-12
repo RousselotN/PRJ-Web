@@ -127,34 +127,6 @@ li.dropdown {
 }
 
 
-
-.splash {
-	position: relative;
-	background-image: url("../../Data/logo_sponsor.png");
-	height: 100%;
-	margin: 0px;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	animation:signup-response 0.5s 1;
-    -webkit-animation:signup-response 0.5s 1;
-    animation-fill-mode: forwards;
-	animation-delay:2s;
-    -webkit-animation-delay:2s;
-    -webkit-animation-fill-mode: forwards;
-	
-}
-
-.delay_appear {
-	opacity: 0;
-	animation:appear 1s 1;
-    -webkit-animation:appear 1s 1;
-    animation-fill-mode: forwards;
-	animation-delay:2s;
-    -webkit-animation-delay:2s;
-    -webkit-animation-fill-mode: forwards;
-}
-
 #livescore {
 	position: absolute;
 	color: #FFFFFF;
@@ -176,25 +148,6 @@ li.dropdown {
 	text-align: center;	
 }
 
-@keyframes appear {
-	from {opacity :0;}
-    to {opacity :1;}
-}
-
-@-webkit-keyframes appear{
-    from {opacity :0;}
-    to {opacity :1;}
-}
-
-@keyframes signup-response{
-    from {opacity :1;}
-    to {opacity :0;}
-}
-
-@-webkit-keyframes signup-response{
-    from {opacity :1;}
-    to {opacity :0;}
-}
 
 footer {
 	
