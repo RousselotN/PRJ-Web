@@ -237,6 +237,20 @@ footer {
     border-radius: 50%;
 }
 
+footer {
+	margin-top: 25px;
+	border-top: 1px solid #e33e44;	
+	background-color: #1c0808;
+}
+
+.reseaux
+{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+}
+
 #BasDePage
 {
     margin-left: 350px;

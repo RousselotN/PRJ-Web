@@ -172,6 +172,52 @@ footer {
 	font-family: sans-serif;
 }
 
+#wrapper {
+	margin-top: 3%;
+}
+
+.apropos
+{
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    margin-left: 250px;
+	font-family: sans-serif;
+}
+
+.apropos a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.apropos a:hover {
+	border-bottom: 1px solid #e33e44;	
+}
+
+footer {
+	margin-top: 25px;
+	border-top: 1px solid #e33e44;	
+	background-color: #1c0808;
+}
+
+.reseaux
+{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 50%;
+}
+
+#BasDePage
+{
+    margin-left: 350px;
+    margin-right: 350px;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+	font-family: sans-serif;
+}
+
 .apropos
 {
     font-size: 18px;
@@ -207,21 +253,10 @@ footer {
     text-align: left;
     margin-left: 250px;
 }
-
-#BasDePage
-{
-    margin-left: 350px;
-    margin-right: 350px;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-	font-family: sans-serif;
-}
  
  #form{
 	 position:relative;
 	 margin-top:5%;
- 	margin-left: 40px;
 	 font-family: sans-serif;
 	 color: white;
 	 text-align: center;
@@ -240,7 +275,7 @@ footer {
 
  }
  section div p{
- 	margin-bottom: 20px;
+ 	margin-bottom: 20px;s
  }
 
  .case{
