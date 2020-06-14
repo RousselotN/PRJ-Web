@@ -247,10 +247,6 @@ footer {
 	font-family: sans-serif;
 }
 
-.foot {
-	max-width: 100px;
-}
-
 .apropos
 {
     font-size: 18px;
@@ -258,6 +254,15 @@ footer {
     text-align: left;
     margin-left: 250px;
 	font-family: sans-serif;
+}
+
+.apropos a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+.apropos a:hover {
+	border-bottom: 1px solid #e33e44;	
 }
 
 .BasTitre
@@ -276,5 +281,4 @@ footer {
     color: white;
     text-align: left;
     margin-left: 250px;
-	font-family: sans-serif;
 }
