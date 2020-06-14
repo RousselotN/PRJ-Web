@@ -312,3 +312,11 @@ i {
     margin-left: 250px;
 	font-family: sans-serif;
 }
+
+.profile {
+	transition: all ease-in-out 250ms;
+}
+
+.profile:hover {
+	box-shadow: 3px 3px #e33e44;
+}
