@@ -6,5 +6,7 @@ Pour ouvrir le site web, ouvrir **/src/Pages/index.html**
 ## Auteurs
 
 Paul Meignan
+
 Nicolas Ruiz
+
 Nathan Rousselot
