@@ -114,6 +114,18 @@ nav a:not(.dp):not(.active)::before {
 	transition: all ease-in-out 250ms;
 }
 
+.active::before {
+	content: '';
+	display: block;
+	height: 5px;
+	background-color: #e33e44;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	transition: all ease-in-out 250ms;
+}
+
+
 nav a:not(.dp):hover::before {
 	width: 100%;
 }
@@ -146,6 +158,14 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   visibility: visible;
   opacity: 1;	
+}
+
+.nav .icon {
+  display: none;
+}
+
+.dp {
+	background-color: #FFFFFF;
 }
 
 footer {
