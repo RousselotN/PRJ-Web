@@ -20,6 +20,7 @@ body, html {
 	margin: 0 auto;
 	padding: 0 10px;
 	
+	
 }
 
 ul{
@@ -46,7 +47,8 @@ a{
 	position: absolute;
 	top: 0;
 	width: 80%;
-	margin: 0 auto;
+	
+	margin-bottom: 50px;
 }
 
 header {
@@ -185,7 +187,7 @@ footer {
 #BasDePage
 {
     margin-left: 350px;
-    margin-right: 350px;
+	margin-right: 350px;
     width: auto;
     display: flex;
     justify-content: space-around;
@@ -193,7 +195,7 @@ footer {
 }
 
 #wrapper {
-	margin-top: 3%;
+	margin-top: 120px;
 }
 
 .apropos
@@ -319,7 +321,7 @@ footer {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav li:not(:first-child) {display: none;}
   .nav li.icon {
     float: right;
@@ -327,7 +329,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav.responsive {position: relative;}
   .nav.responsive .icon {
     position: absolute;
@@ -362,5 +364,23 @@ footer {
 {
  resize : none;
  height: 200px;
+}
+
+@media screen and (max-width: 1184px){
+    .apropos{
+        margin-left: 30px;
+    }
+    .BasTitre{
+        margin-left: 30px;
+    }
+    .Marque{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .foot{
+        display: none;
+    }
 }
 

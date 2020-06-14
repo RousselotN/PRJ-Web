@@ -126,7 +126,7 @@ li.dropdown {
 
 #title{
     text-align:center;
-	margin-top:7%;
+	margin-top: 120PX;
 	color: #ffffff;
 	border-bottom: 4px solid #e33e44;
 	font-size: 35px;
@@ -256,7 +256,7 @@ i {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav li:not(:first-child) {display: none;}
   .nav li.icon {
     float: right;
@@ -264,7 +264,7 @@ i {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav.responsive {position: relative;}
   .nav.responsive .icon {
     position: absolute;
@@ -313,4 +313,21 @@ i {
     text-align: left;
     margin-left: 250px;
 	font-family: sans-serif;
+}
+@media screen and (max-width: 1184px){
+  .apropos{
+      margin-left: 30px;
+  }
+  .BasTitre{
+      margin-left: 30px;
+  }
+  .Marque{
+      margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .reseaux{
+      display: none;
+  }
 }

@@ -7,6 +7,10 @@ body, html {
 	font-weight: 800;
 }
 
+#wrapper{
+	margin-top: 50px;
+}
+
 .textHome{
 	margin-top: 150px;
 	text-align: center;
@@ -153,7 +157,7 @@ i {
 	  color: #FFFFFF;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav li:not(:first-child) {display: none;}
   .nav li.icon {
     float: right;
@@ -161,7 +165,7 @@ i {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav.responsive {position: relative;}
   .nav.responsive .icon {
     position: absolute;
@@ -173,6 +177,12 @@ i {
     display: block;
     text-align: left;
   }
+}
+
+@media screen and (max-width: 650px){
+	body .video{
+		width: 300px;
+	}
 }
 
 #livescore {
@@ -223,6 +233,19 @@ img.imageHome{
 
 }
 
+@media screen and (max-width: 1184px){
+	.delay_appear .apropos{
+		margin-left: 30px;
+	}
+	.delay_appear .BasTitre{
+		margin-left: 30px;
+	}
+	.delay_appear .Marque{
+		margin-left: 30px;
+	}
+
+}
+
 footer {
 	
 	border-top: 1px solid #e33e44;	
@@ -241,14 +264,6 @@ footer {
 	margin-top: 25px;
 	border-top: 1px solid #e33e44;	
 	background-color: #1c0808;
-}
-
-.reseaux
-{
-    width: 60px;
-    height: 60px;
-    position: relative;
-    border-radius: 50%;
 }
 
 #BasDePage
